@@ -1,8 +1,15 @@
+# Node / NPM
 node_modules/
 npm-debug.log
+
+# Archivos de entorno y secretos
 .env
 *.pem
+
+# Archivos del sistema y editores
 .DS_Store
 .vscode/
 .idea/
+
+# Logs de Docker / Sistema
 *.log
