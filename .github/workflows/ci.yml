@@ -14,10 +14,8 @@ jobs:
     - name: Checkout del código
       uses: actions/checkout@v4
 
-    - name: Validar sintaxis de la app
-      run: |
-        cd app
-        node --check index.js
+    - name: Validar sintaxis de la app con Docker
+      run: docker run --rm -v $(pwd)/app:/app -w /app node:20-alpine node --check index.js
 
     - name: Validar Docker Compose
       run: docker compose config
