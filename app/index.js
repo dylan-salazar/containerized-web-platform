@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
     </head>
     <body>
       <div class="card">
-        <h1>🚀 Servidor Web Activo</h1>
+        <h1> Servidor Web Activo</h1>
         <p>Aplicación empaquetada en Docker y sirviendo tráfico correctamente.</p>
         <span class="badge">Entorno: ${ENV}</span>
         <div class="status">● Sistema Operativo: Linux (Containerized)</div>
