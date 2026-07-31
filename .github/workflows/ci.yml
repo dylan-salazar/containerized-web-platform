@@ -14,18 +14,13 @@ jobs:
     - name: Checkout del código
       uses: actions/checkout@v4
 
-    - name: Configurar Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-
-    - name: Validar sintaxis del código de la app
+    - name: Validar sintaxis de la app
       run: |
         cd app
         node --check index.js
 
-    - name: Validar archivo de Docker Compose
+    - name: Validar Docker Compose
       run: docker compose config
 
-    - name: Desplegar contenedores con Docker Compose
+    - name: Desplegar contenedores
       run: docker compose up -d --build
