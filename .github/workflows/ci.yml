@@ -7,8 +7,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
+  build-test-and-deploy:
+    runs-on: self-hosted
 
     steps:
     - name: Checkout del código
@@ -26,3 +26,6 @@ jobs:
 
     - name: Validar archivo de Docker Compose
       run: docker compose config
+
+    - name: Desplegar contenedores con Docker Compose
+      run: docker compose up -d --build
